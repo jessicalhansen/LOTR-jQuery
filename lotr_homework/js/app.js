@@ -94,6 +94,15 @@ const makeHobbits = () => {
 
   // hint: get 'The-Shire' by using its id
 
+  const hobbitList = $(`<ul></ul>`);
+
+  for (let i = 0; i < hobbits.length; i++) {
+    const hobbitsLi = $(`<li class="hobbit">${hobbits[i]}</li>`);
+    hobbitList.append(hobbitsLi);
+  }
+
+  $(`#The-Shire`).append(hobbitList);
+
 };
 
 // COMMIT YOUR WORK
