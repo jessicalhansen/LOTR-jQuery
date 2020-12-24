@@ -100,9 +100,7 @@ const makeHobbits = () => {
     const hobbitsLi = $(`<li class="hobbit">${hobbits[i]}</li>`);
     $(hobbitList).append(hobbitsLi);
   }
-
   $(`#The-Shire`).append(hobbitList);
-
 };
 
 // COMMIT YOUR WORK
@@ -189,7 +187,7 @@ const makeBuddies = () => {
 // ============
 const leaveTheShire = () => {
 
-    console.log(`Leave the Shire.`);
+  console.log(`Leave the Shire.`);
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
@@ -197,7 +195,6 @@ const leaveTheShire = () => {
 
   const grabHobbits = $(`#The-Shire`).children(`ul`);
   $(`#Rivendell`).append(grabHobbits);
-
 };
 
 // COMMIT YOUR WORK
@@ -208,7 +205,7 @@ const leaveTheShire = () => {
 // ============
 const beautifulStranger = () => {
 
-    console.log(`Beautiful stranger.`);
+  console.log(`Beautiful stranger.`);
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
     
@@ -216,7 +213,6 @@ const beautifulStranger = () => {
 
   const aragorn = $(`.buddy`).eq(3);
   aragorn.text(`Aragorn`);
-  
 };
 
 // COMMIT YOUR WORK
@@ -227,16 +223,27 @@ const beautifulStranger = () => {
 // ============
 const forgeTheFellowShip = () => {
 
-    console.log(`Forge the Fellowship.`);
+  console.log(`Forge the Fellowship.`);
 
   // 1. create a new div with an id 'the-fellowship'
 
+  const fellowshipDiv = $(`<div id="the-fellowship"></div>`);
+
   // 2. add an h1 with the text 'The Fellowship' to this new div
+
+  const fellowshipH1 = $(`<h1>The Fellowship</h1>`).append(fellowshipDiv);
 
   // 3. append the fellowship to middle-earth
 
+  $(`#middle-earth`).append(fellowshipDiv);
+
   // 4. add the unordered lists of hobbits and buddies to 'the-fellowship'
 
+  const hobbitsToFellowship = $(`.hobbit`);
+  $(`#the-fellowship`).append(hobbitsToFellowship);
+
+  const buddiesToFellowship = $(`.buddy`);
+  $(`#the-fellowship`).append(buddiesToFellowship);
 };
 
 // COMMIT YOUR WORK
