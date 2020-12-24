@@ -214,7 +214,9 @@ const beautifulStranger = () => {
     
   // hint: You can get a list of elements by tag name, such as 'aside'
 
-
+  const aragorn = $(`.buddy`).eq(3);
+  aragorn.text(`Aragorn`);
+  
 };
 
 // COMMIT YOUR WORK
