@@ -173,7 +173,7 @@ const makeBuddies = () => {
 
     const buddyList = $(`<ul></ul>`);
     tagBuddies.append(buddyList);
-    
+
   // 3. give each of the buddies a class of "buddy"
 
     for (let i = 0; i < buddies.length; i++) {
@@ -195,6 +195,9 @@ const leaveTheShire = () => {
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
+  const grabHobbits = $(`#The-Shire`).children(`ul`);
+  $(`#Rivendell`).append(grabHobbits);
+
 };
 
 // COMMIT YOUR WORK
@@ -208,8 +211,9 @@ const beautifulStranger = () => {
     console.log(`Beautiful stranger.`);
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
-
+    
   // hint: You can get a list of elements by tag name, such as 'aside'
+
 
 };
 
