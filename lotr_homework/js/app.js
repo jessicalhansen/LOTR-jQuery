@@ -98,7 +98,7 @@ const makeHobbits = () => {
 
   for (let i = 0; i < hobbits.length; i++) {
     const hobbitsLi = $(`<li class="hobbit">${hobbits[i]}</li>`);
-    hobbitList.append(hobbitsLi);
+    $(hobbitList).append(hobbitsLi);
   }
 
   $(`#The-Shire`).append(hobbitList);
@@ -146,7 +146,7 @@ const makeBaddies = () => {
 
     for (let i = 0; i < baddies.length; i++) {
       const badLi = $(`<li class="baddy">${baddies[i]}</li>`);
-      baddiesList.append(badLi);
+      $(baddiesList).append(badLi);
     }
 
   // 3. remember to append them to Mordor
@@ -166,10 +166,19 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
+    const tagBuddies = $(`<aside></aside>`);
+    $(`#Mordor`).append(tagBuddies);
+
   // 2. display an unordered list of buddies in the aside
 
+    const buddyList = $(`<ul></ul>`);
+    tagBuddies.append(buddyList);
+    
   // 3. give each of the buddies a class of "buddy"
 
+    for (let i = 0; i < buddies.length; i++) {
+      $(buddyList).append(`<li class="buddy">${buddies[i]}</li>`);
+    }
 };
 
 // COMMIT YOUR WORK
