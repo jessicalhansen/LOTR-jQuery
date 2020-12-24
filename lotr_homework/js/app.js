@@ -140,9 +140,18 @@ const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
 
+    const baddiesList = $(`<ul></ul>`);
+    
   // 2. give each of the baddies a class of "baddy"
 
+    for (let i = 0; i < baddies.length; i++) {
+      const badLi = $(`<li class="baddy">${baddies[i]}</li>`);
+      baddiesList.append(badLi);
+    }
+
   // 3. remember to append them to Mordor
+
+  $(`#Mordor`).append(baddiesList);
 };
 
 // COMMIT YOUR WORK
