@@ -328,10 +328,17 @@ const weWantsIt = () => {
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
+  const gollumDiv = $(`<div id="gollum" />`);
+  $(`#Mordor`).append(gollumDiv);
+
   // 2. Move the ring from Frodo and give it to Gollum
+
+  const takeRing = $(`.hobbit`).eq(0).children(`#the-ring`);
+  $(`#gollum`).append(takeRing);
 
   // 3. Move Gollum into Mount Doom
 
+  $(`#mount-doom`).append(`#gollum`);
 };
 
 // COMMIT YOUR WORK
