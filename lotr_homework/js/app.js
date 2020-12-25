@@ -338,7 +338,7 @@ const weWantsIt = () => {
 
   // 3. Move Gollum into Mount Doom
 
-  $(`#mount-doom`).append(`#gollum`);
+  $(`#mount-doom`).append(gollumDiv);
 };
 
 // COMMIT YOUR WORK
@@ -353,10 +353,16 @@ const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
 
+  $(`#gollum`).remove();
+
   // 2. remove all the baddies from the DOM
+
+  $(`#baddy`).remove();
 
   // 3. Move all the hobbits back to the shire
 
+  const hobbitsReturn = $(`.hobbit`);
+  $(`#The-Shire`).append(hobbitsReturn);
 };
 
 // COMMIT YOUR WORK
